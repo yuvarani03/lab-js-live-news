@@ -1,8 +1,7 @@
-let apikey="3de20187dd2244d884515e79bbadfa09";
 async function selCountry() {
     let country = document.getElementById("country").value;
     if (country !== "") {
-        let url = "https://newsapi.org/v2/top-headlines?country="+country+"&apiKey="+apikey;
+        let url =(`https://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=3de20187dd2244d884515e79bbadfa09`)
         axios.get(url)
             .then(res => {
                 console.log(res)
